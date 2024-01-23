@@ -1,0 +1,286 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $darkBlue;
+  color: $cream;
+  font-family: $copy;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  font-family: $header;
+  font-weight: 800;
+  span {
+    p {
+      margin: 0 auto;
+    }
+  }
+  &.accent {
+    font-family: $accent;
+    font-weight: 400;
+  }
+  &.main-header {
+    margin: 4rem auto 2rem;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.copy {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 0.25rem 1rem;
+  text-align: center;
+  &.align-left {
+    text-align: left;
+  }
+  &.extra-padding {
+    padding: 1rem;
+  }
+  &.margin-bottom {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  &.row {
+    flex-direction: row;
+  }
+  &.center {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  .full {
+    flex: 100%;
+  }
+  .half {
+    flex: 50%;
+  }
+  .one-third {
+    flex: 33.333%;
+  }
+  .two-thirds {
+    flex: 66.666%;
+  }
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    &.column {
+      flex-direction: column;
+    }
+  }
+}
+
+.no-mrgn-top-bttm {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+button.button,
+a.button,
+input.button {
+  color: $cream;
+  background-color: $coolBlue;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  box-shadow: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  border-style: solid;
+  border-color: $cream;
+  cursor: pointer;
+}
+
+.img-wrap {
+  position: relative;
+  .img-bkgd {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
+.link-wrap {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  a.button,
+  button.button {
+    min-width: 275px;
+    margin: 0.25rem;
+    text-align: center;
+    cursor: pointer;
+    z-index: 15;
+  }
+  &.padding-top {
+    padding-top: 1rem;
+  }
+  &.single-button {
+    max-width: 22rem;
+    margin: 0 auto;
+  }
+  &.margin-bottom {
+    margin-bottom: 4rem;
+  }
+}
+
+#portfolio {
+  padding: 4rem 2rem;
+  gap: 3rem 1rem;
+  max-width: 1050px;
+  margin: auto;
+  .half {
+    flex: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    .half {
+      flex: calc(50% - 1rem);
+      height: 21rem;
+      .text-wrap {
+        width: 95%;
+        h2 {
+          font-size: 2rem;
+        }
+        p.desc {
+          font-size: 1rem;
+        }
+        ul.features {
+          li.feature {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card {
+  display: flex;
+  height: 40rem;
+  position: relative;
+  .img-bkgd {
+    object-position: top;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .text-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    z-index: 10;
+    width: 75%;
+    max-width: 900px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    h2 {
+      margin: 1rem auto 0.5rem;
+    }
+    p.desc {
+      margin: 0 auto;
+      font-size: 2rem;
+      font-style: italic;
+    }
+    ul.features {
+      margin: 1rem 0;
+      padding: 0 1rem;
+      text-align: left;
+      li.feature {
+        font-size: 2rem;
+      }
+    }
+    .button {
+
+    }
+  }
+  &.active {
+    &::after {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+    .text-wrap {
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+      h2 {
+      }
+      p.desc {
+      }
+      ul.features {
+        li.feature {
+        }
+      }
+      .button {
+  
+      }
+    }
+  }
+  // @media (-moz-touch-enabled: 0), (pointer: fine) and (min-width: 768px) {
+  //   .text-wrap {
+  //     opacity: 0;
+  //   }
+  //   &:hover {
+  //     .text-wrap {
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
+}
+
+.video-container {
+  display: none;
+  visibility: hidden;
+  &.active {
+    display: block;
+    visibility: visible;
+  }
+}
