@@ -250,14 +250,15 @@ input.button {
   }
 }
 
-.card {
+.card,
+.toggle-card {
   display: flex;
   height: fit-content;
   position: relative;
-  cursor: pointer;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   flex-direction: column;
   border-bottom: 8px double $lightBlue;
+  cursor: pointer;
   .text-wrap {
     p {
       margin: 0.5rem auto 1.25rem;
@@ -267,89 +268,53 @@ input.button {
       }
     }
   }
-  .img-wrap,
+  .card-img,
   .video-container {
     height: 35rem;
+    position: relative;
+    overflow: hidden;
     .img-bkgd {
       object-position: top;
     }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 5;
-      background-color: rgba(0, 0, 0, 0.85);
-      height: 100%;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-  }
-  .close-card-info {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    z-index: 10;
-    color: $cream;
-    background-color: transparent;
-    border: none;
-    font-size: 5rem;
-    opacity: 0;
   }
   .overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem 2rem;
-    margin: 1rem auto;
+    position: absolute;
     z-index: 10;
-    width: 75%;
-    max-width: 900px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    h2 {
-      margin: 1rem auto 0.5rem;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: all 0.3s ease-in-out;
+    top: 100%;
+    .tab {
+      display: block;
+      top: 0;
+      height: 7.5rem;
     }
-    p.desc {
-      margin: 0 auto;
-      font-size: 2rem;
-      font-style: italic;
+    .close {
+      font-size: 2.5rem;
+      text-align: right;
+      padding: 1rem 2rem 0 0;
+      display: none;
+      visibility: hidden;
+    }
+    .overlay-text {
+      // height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
     }
     ul.features {
       margin: 1rem 0;
       padding: 0 1rem;
       text-align: left;
       z-index: 15;
+      // text-align: center;
       li.feature {
         font-size: 2rem;
-      }
-    }
-    .button {
-    }
-  }
-  &:not(.no-ovrly) {
-    &.active {
-      .img-wrap {
-        &::after,
-        .close-card-info,
-        .overlay {
-          opacity: 1;
-          transition: opacity 0.3s ease-in-out;
-        }
-      }
-
-      .overlay {
-        h2 {
-        }
-        ul.features {
-          li.feature {
-          }
-        }
-        .button {
-        }
+        padding: 1.25rem 0 0 0;
       }
     }
   }
@@ -360,6 +325,31 @@ input.button {
     padding-bottom: 0;
     border-bottom: none;
   }
+
+  &.tab-show {
+    .overlay {
+      top: calc(100% - 6rem);
+    }
+  }
+  &.active {
+    .card-img {
+      .overlay {
+        top: 0;
+        .tab {
+          display: none;
+          visibility: hidden;
+        }
+        .close {
+          display: block;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  padding: 5rem 1rem 7rem;
 }
 
 .video-container {
