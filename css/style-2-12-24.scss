@@ -103,12 +103,12 @@ a {
   .two-thirds {
     flex: 66.666%;
   }
-  @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    &.column {
-      flex-direction: column;
-    }
-  }
+  // @media only screen and (min-width: 768px) {
+  //   flex-direction: row;
+  //   &.column {
+  //     flex-direction: column;
+  //   }
+  // }
 }
 
 .no-mrgn-top-bttm {
@@ -287,8 +287,7 @@ input.button {
     top: 100%;
     .tab {
       display: block;
-      top: 0;
-      height: 7.5rem;
+      font-size: 2.5rem;
     }
     .close {
       font-size: 2.5rem;
@@ -298,7 +297,7 @@ input.button {
       visibility: hidden;
     }
     .overlay-text {
-      // height: 100%;
+      height: 62%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -311,8 +310,7 @@ input.button {
       padding: 0 1rem;
       text-align: left;
       z-index: 15;
-      max-width: 75%;
-      // text-align: center;
+      width: 75%;
       li.feature {
         font-size: 2rem;
         padding: 1.25rem 0 0 0;
@@ -329,7 +327,7 @@ input.button {
 
   &.tab-show {
     .overlay {
-      top: calc(100% - 6rem);
+      top: calc(100% - 8.5rem);
     }
   }
   &.active {
