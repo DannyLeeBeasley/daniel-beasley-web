@@ -184,6 +184,10 @@ input.button {
   }
 }
 
+.header-wrap {
+  padding: 3rem 0;
+}
+
 .decor-end {
   position: relative;
   width: 100%;
@@ -197,11 +201,12 @@ input.button {
     margin: auto;
   }
   &::before {
-    width: 100%;
-  }
-  &::after {
     left: 1rem;
     width: calc(100% - 2rem);
+  }
+  &::after {
+    left: 2rem;
+    width: calc(100% - 4rem);
   }
   &.top {
     margin-bottom: 2rem;
@@ -227,6 +232,10 @@ input.button {
   margin: auto;
   .half {
     flex: 100%;
+  }
+  section#featured {
+    background-color: $gray;
+    padding: 2rem 0 4rem;
   }
   @media only screen and (min-width: 768px) {
     .half {
