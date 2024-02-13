@@ -4,7 +4,6 @@ let expandSects = document.querySelectorAll(".expnd-sect");
 let cards = document.querySelectorAll(".card");
 let closeBttns = document.querySelectorAll(".close-card-info");
 
-
 //Click Listneners
 expandBttns.forEach(function (bttn) {
   bttn.addEventListener("click", expandSection);
@@ -16,7 +15,6 @@ expandBttns.forEach(function (bttn) {
 cards.forEach(function (card) {
   card.addEventListener("click", activateCard);
 });
-
 
 //Functions
 function expandSection(e) {
@@ -36,7 +34,6 @@ function activeButton(e) {
   e.target.classList.add("active");
 }
 
-
 function revealReadMore() {
   scrollDistance = window.scrollY;
 
@@ -49,13 +46,13 @@ function revealReadMore() {
   });
 }
 
-function activateCard () {
+function activateCard() {
   if (this.classList.contains("active")) {
     this.classList.remove("active");
   } else {
-    cards.forEach(function(card) {
+    cards.forEach(function (card) {
       card.classList.remove("active");
-    })
+    });
     this.classList.add("active");
   }
 }
