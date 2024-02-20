@@ -111,12 +111,6 @@ a {
   .two-thirds {
     flex: 66.666%;
   }
-  // @media only screen and (min-width: 1100px) {
-  //   flex-direction: row;
-  //   &.column {
-  //     flex-direction: column;
-  //   }
-  // }
 }
 
 .no-mrgn-top-bttm {
@@ -276,7 +270,6 @@ input.button {
     flex-direction: row;
     .card {
       margin: 0;
-      flex: 45%;
       padding: 1rem 1rem 2rem;
       &:first-child,
       &:last-child {
@@ -284,7 +277,7 @@ input.button {
       }
       &:last-child {
         padding: 1rem;
-        border-bottom: 8px double $lightBlue;
+        
       }
       .text-wrap {
         height: 12rem;
@@ -307,7 +300,7 @@ input.button {
         }
       }
       .card-img {
-        height: 20rem;
+        // height: 33rem;
         .overlay {
           top: calc(100% - 6rem);
           .tab {
@@ -346,7 +339,7 @@ input.button {
       }
       &:nth-child(odd) {
         padding: 2rem 1rem 2rem 0;
-        border-right: 2px solid $lightBlue;
+        
       }
       &:nth-child(even) {
         padding: 2rem 0 2rem 1rem;
@@ -355,10 +348,12 @@ input.button {
   }
   @media only screen and (min-width: 1100px) {
     .card {
+      flex: 45%;
       &:first-child,
       &:last-child {
       }
       &:last-child {
+        border-bottom: 8px double $lightBlue;
       }
       .text-wrap {
         h3 {
@@ -369,8 +364,10 @@ input.button {
         }
       }
       .card-img {
+        height: 20rem;
       }
       &:nth-child(odd) {
+        border-right: 2px solid $lightBlue;
       }
       &:nth-child(even) {
       }
@@ -424,7 +421,7 @@ input.button {
     .close {
       font-size: 2.5rem;
       text-align: right;
-      padding: 1rem 2rem 0 0;
+      padding: 0.5rem 2rem 0 0;
       display: none;
       visibility: hidden;
     }
@@ -438,7 +435,7 @@ input.button {
       padding: 1rem;
     }
     ul.features {
-      margin: 1rem 0;
+      margin: 0.5rem 0;
       padding: 0 1rem;
       text-align: left;
       z-index: 15;
@@ -446,7 +443,7 @@ input.button {
       display: none;
       li.feature {
         font-size: 2rem;
-        padding: 1.25rem 0 0 0;
+        padding: 1rem 0 0 0;
       }
     }
   }
@@ -491,7 +488,6 @@ input.button {
     height: fit-content;
   }
   @media only screen and (min-width: 768px) {
-    // height: 30rem;
     .text-wrap {
       p {
         &.desc {
@@ -499,7 +495,7 @@ input.button {
       }
     }
     .card-img {
-      height: 28rem;
+      height: 30rem;
       .img-bkgd {
       }
     }
