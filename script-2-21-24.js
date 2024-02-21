@@ -1,8 +1,11 @@
 //Define Variables
+let windowHeight = window.innerHeight;
+let ninetyEightPercentWindowHeight = windowHeight * 0.98;
 let expandBttns = document.querySelectorAll(".expand-bttn");
 let expandSects = document.querySelectorAll(".expnd-sect");
 let cards = document.querySelectorAll(".card");
 let closeBttns = document.querySelectorAll(".close-card-info");
+//End Variables
 
 //Click Listneners
 expandBttns.forEach(function (bttn) {
@@ -15,6 +18,7 @@ expandBttns.forEach(function (bttn) {
 cards.forEach(function (card) {
   card.addEventListener("click", activateCard);
 });
+//End Click Listeners
 
 //Functions
 function expandSection(e) {
@@ -35,12 +39,13 @@ function activeButton(e) {
 }
 
 function revealReadMore() {
-  scrollDistance = window.scrollY;
-
   cards.forEach(function (card) {
-    var distanceFromTop = window.pageYOffset + card.getBoundingClientRect().top;
+    var cardImg = card.querySelector(".card-img");
+    var distanceFromTop = cardImg.getBoundingClientRect().top;
+    var cardImgHeight = cardImg.offsetHeight;
+    var bottomDistanceFromTop = distanceFromTop + cardImgHeight;
 
-    if (scrollDistance + 1050 > distanceFromTop) {
+    if (bottomDistanceFromTop < ninetyEightPercentWindowHeight) {
       card.classList.add("tab-show");
     }
   });
@@ -56,5 +61,6 @@ function activateCard() {
     this.classList.add("active");
   }
 }
+//End Functions
 
 window.addEventListener("scroll", revealReadMore);
