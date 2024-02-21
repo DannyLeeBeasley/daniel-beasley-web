@@ -285,14 +285,6 @@ input.button {
       &:last-child {
         border-bottom: 8px double $lightBlue;
       }
-      .text-wrap {
-        h3 {
-        }
-        p.desc {
-        }
-        .stack {
-        }
-      }
       .card-img {
         height: 19rem;
         .overlay {
@@ -462,51 +454,6 @@ input.button {
   .video-container {
     height: fit-content;
   }
-  // @media only screen and (min-width: 768px) {
-  //   .text-wrap {
-  //     p {
-  //       &.desc {
-  //       }
-  //     }
-  //   }
-  //   .card-img {
-  //     height: 30rem;
-  //     .img-bkgd {
-  //     }
-  //   }
-  //   .overlay {
-  //     .tab {
-  //     }
-  //     .close {
-  //     }
-  //     .overlay-text {
-  //     }
-  //     ul.features {
-  //       li.feature {
-  //       }
-  //     }
-  //   }
-  //   &:first-of-type {
-  //   }
-  //   &:last-of-type {
-  //   }
-
-  //   &.tab-show {
-  //     .overlay {
-  //     }
-  //   }
-  //   &.active {
-  //     .card-img {
-  //       .overlay {
-  //         top: 0;
-  //         .tab {
-  //         }
-  //         .close {
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
   @media only screen and (min-width: 1100px) {
     justify-content: flex-start;
     .text-wrap {
@@ -521,43 +468,15 @@ input.button {
         }
       }
     }
-    .card-img {
-      // height: 31rem;
-      .img-bkgd {
-      }
-    }
     .overlay {
       .tab {
         p {
           font-size: 2rem;
         }
       }
-      .close {
-      }
-      .overlay-text {
-      }
       ul.features {
         li.feature {
           font-size: 1.75rem;
-        }
-      }
-    }
-    &:first-of-type {
-    }
-    &:last-of-type {
-    }
-
-    &.tab-show {
-      .overlay {
-      }
-    }
-    &.active {
-      .card-img {
-        .overlay {
-          .tab {
-          }
-          .close {
-          }
         }
       }
     }
@@ -592,6 +511,16 @@ input.button {
   }
 }
 
+.video-container {
+  display: none;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+  &.active {
+    display: block;
+    visibility: visible;
+  }
+}
+
 footer {
   padding: 5rem 1rem 7rem;
   border-top: 2px solid $cream;
@@ -608,15 +537,5 @@ footer {
         }
       }
     }
-  }
-}
-
-.video-container {
-  display: none;
-  visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  &.active {
-    display: block;
-    visibility: visible;
   }
 }

@@ -39,8 +39,6 @@ function activeButton(e) {
 }
 
 function revealReadMore() {
-  scrollDistance = window.scrollY;
-
   cards.forEach(function (card) {
     var cardImg = card.querySelector(".card-img");
     var distanceFromTop = cardImg.getBoundingClientRect().top;
