@@ -1,0 +1,1 @@
+This site is built using HTML, Vanilla JavaScript, and SCSS. It is deployed through Google Cloud Platform CI/CD linked to the GitHub repository. 
