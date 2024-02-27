@@ -1,1 +1,2 @@
-This site is built using HTML, Vanilla JavaScript, and SCSS. It is deployed through Google Cloud Platform CI/CD linked to the GitHub repository. 
+This site is built using HTML, Vanilla JavaScript, and SCSS.
+It is deployed through Google Cloud Platform using CI/CD linked to this GitHub repository. 
