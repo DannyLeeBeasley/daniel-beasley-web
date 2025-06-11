@@ -1,425 +1,597 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            http-equiv="x-ua-compatible"
+            content="ie=edge"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+        />
 
-    <title>Daniel L Beasley Web Development</title>
+        <title>Daniel L Beasley Web Development</title>
 
-    <!-- FAVICON -->
-    <link rel="icon" href="../images/favicon.png" />
+        <!-- FAVICON -->
+        <link
+            rel="icon"
+            href="../images/favicon.png"
+        />
 
-    <!-- FONTS -->
-    <link rel="stylesheet" href="https://use.typekit.net/vxg2pam.css" />
+        <!-- FONTS -->
+        <link
+            rel="stylesheet"
+            href="https://use.typekit.net/vxg2pam.css"
+        />
 
-    <!-- CSS -->
-    <link
-      rel="preload"
-      href="../css/style-2-28-24.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="../css/style-2-28-24.min.css" />
-    </noscript>
+        <!-- CSS -->
+        <link
+            rel="preload"
+            href="../css/style-2-28-24.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+        />
+        <noscript
+            ><link
+                rel="stylesheet"
+                href="../css/style-2-28-24.min.css"
+            />
+        </noscript>
 
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-5SZN6ZR9");
-    </script>
-    <!-- End Google Tag Manager -->
-  </head>
-  <body>
-    <main>
-      <div class="header-wrap">
-        <h1 class="main-header">
-          Daniel L Beasley <span class="second-line">Web Development</span>
-        </h1>
-        <div class="copy">
-          <p>
-            Welcome to my web development portfolio, built with HTML,
-            JavaScript, and CSS. Please reach out to
-            <a href="mailto: dbeasley.dev@gmail.com" target="_blank"
-              >dbeasley.dev@gmail.com</a
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-5SZN6ZR9");
+        </script>
+        <!-- End Google Tag Manager -->
+    </head>
+    <body>
+        <main>
+            <div class="header-wrap">
+                <h1 class="main-header">
+                    Daniel L Beasley
+                    <span class="second-line">Web Development</span>
+                </h1>
+                <div class="copy">
+                    <p>
+                        Welcome to my web development portfolio, built with
+                        HTML, JavaScript, and CSS.
+                        <br />
+                        Please reach out to
+                        <a
+                            href="mailto: dbeasley.dev@gmail.com"
+                            target="_blank"
+                            >dbeasley.dev@gmail.com</a
+                        >
+                        with any questions.
+                    </p>
+                    <p class="smallprint">
+                        <sup>*</sup>&nbsp; Websites I built for SilverTech Inc.
+                        These websites are maintained by and remain the property
+                        of SilverTech Inc.
+                    </p>
+                    <p class="smallprint">
+                        <sup>*</sup><sup>*</sup>&nbsp; Websites I built for
+                        Lettuce Entertain You Enterprises. These websites are
+                        maintained by and remain the property of Lettuce
+                        Entertain You Enterprises.
+                    </p>
+                </div>
+            </div>
+            <section
+                aria-label="Daniel L Beasley's Website Portofilio"
+                id="portfolio"
+                class="flex wrap"
             >
-            with any questions.
-          </p>
-          <p class="smallprint">
-            <sup>*</sup>&nbsp; Websites I built for SilverTech Inc. These
-            websites are maintained by and remain the property of SilverTech
-            Inc.
-          </p>
-          <p class="smallprint">
-            <sup>*</sup><sup>*</sup>&nbsp; Websites I built for Lettuce
-            Entertain You Enterprises while employed by the company. These
-            websites are maintained by and remain the property of Lettuce
-            Entertain You Enterprises.
-          </p>
-        </div>
-      </div>
-      <section
-        aria-label="Daniel L Beasley's Website Portofilio"
-        id="portfolio"
-        class="flex wrap"
-      >
-        <section aria-label="Featured websites" id="featured" class="flex wrap">
-          <h2>Featured</h2>
-          <div class="decor-end top"></div>
-          <article
-            aria-label="Community West Bank - California-headquartered community bank, for business and consumer banking"
-            class="card full featured"
-          >
-            <div class="text-wrap">
-              <h3 class="accent">Community West Bank<sup>*</sup></h3>
-              <p class="desc">
-                California-headquartered community bank, for business and
-                consumer banking
-              </p>
-              <p class="stack">HTML - Stencil.js/TypeScript - SCSS - Kentico</p>
-            </div>
-            <div class="card-img img-wrap">
-              <img
-                class="img-bkgd"
-                src="../images/Community_West_Cover.webp"
-                alt="Screenshot of Community West Bank website landing page"
-              />
-              <div class="overlay">
-                <div aria-label="See More" class="tab"><p>See More</p></div>
-                <div class="close">&times;</div>
-                <div class="overlay-text">
-                  <ul class="features">
-                    <li class="feature">Detailed Menu Ornamentations</li>
-                    <li class="feature">
-                      <a
-                        href="https://www.kentico.com/discover/blog/september-2024-site-of-the-month"
-                        target="_blank"
-                        >Kentico Site of the Month</a
-                      >, September 2024
-                    </li>
-                    <li class="feature">
-                      Elegent Transition and Hover Effects
-                    </li>
-                    <li class="feature">
-                      Seemlessly Responsive Layout and Nav
-                    </li>
-                  </ul>
-                </div>
-                <div class="link-wrap padding-top">
-                  <a
-                    class="button active"
+                <!-- Featured -->
+                <section
+                    aria-label="Featured websites"
+                    id="featured"
+                    class="flex wrap"
+                >
+                    <h2>Featured</h2>
+                    <div class="decor-end top"></div>
+                    <!-- Community West Bank -->
+                    <article
+                        aria-label="Community West Bank - California-headquartered community bank, for business and consumer banking"
+                        class="card full featured"
+                    >
+                        <div class="text-wrap">
+                            <h3 class="accent">
+                                Community West Bank<sup>*</sup>
+                            </h3>
+                            <p class="desc">
+                                California-headquartered community bank, for
+                                business and consumer banking
+                            </p>
+                            <p class="stack">
+                                HTML - Stencil.js/TypeScript - SCSS - Kentico
+                            </p>
+                        </div>
+                        <div class="card-img img-wrap">
+                            <img
+                                class="img-bkgd"
+                                src="../images/Community_West_Cover.webp"
+                                alt="Screenshot of Community West Bank website landing page"
+                            />
+                            <div class="overlay">
+                                <div
+                                    aria-label="See features"
+                                    class="tab"
+                                >
+                                    <p>Features</p>
+                                </div>
+                                <div class="close">&times;</div>
+                                <div class="overlay-text">
+                                    <ul class="features">
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.kentico.com/discover/blog/september-2024-site-of-the-month"
+                                                target="_blank"
+                                                >Kentico Site of the Month,
+                                                September 2024</a
+                                            >
+                                        </li>
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.communitywestbank.com/lending/commercial-loans/business-loans"
+                                                target="_blank"
+                                                >Callout Card Lists Turn to
+                                                Slides on Mobile, Tables Turn to
+                                                Accordions</a
+                                            >
+                                        </li>
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.communitywestbank.com/blog"
+                                                target="_blank"
+                                                >Blog Pagination and Filtering
+                                                with URL Query Strings</a
+                                            >
+                                        </li>
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.communitywestbank.com/locations-and-hours"
+                                                target="_blank"
+                                                >Google Maps Locations Search
+                                                Page</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="link-wrap padding-top">
+                                    <a
+                                        class="button active"
+                                        target="_blank"
+                                        href="https://www.communitywestbank.com/"
+                                        >Visit Site</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Mon Ami Gabi -->
+                    <article
+                        aria-label="Mon Ami Gabi - classic French bistro with three locations nationwide"
+                        class="card full featured"
+                    >
+                        <div class="text-wrap">
+                            <h3 class="accent">
+                                Mon Ami Gabi<sup>*</sup><sup>*</sup>
+                            </h3>
+                            <p class="desc">
+                                Classic French bistro with three locations
+                                nationwide
+                            </p>
+                            <p class="stack">
+                                HTML - PHP - JQuery - SCSS - WordPress
+                            </p>
+                        </div>
+                        <div class="card-img img-wrap">
+                            <img
+                                class="img-bkgd"
+                                src="../images/Mon_Ami_Cover.webp"
+                                alt="Screenshot of Mon Ami Gabi website landing page"
+                            />
+                            <div class="overlay">
+                                <div
+                                    aria-label="See features"
+                                    class="tab"
+                                >
+                                    <p>Features</p>
+                                </div>
+                                <div class="close">&times;</div>
+                                <div class="overlay-text">
+                                    <ul class="features">
+                                        <li class="feature">
+                                            <a href="https://www.monamigabi.com/bethesda/" target="_blank">Nuanced Decorative Borders and
+                                            Illustrations</a>
+                                        </li>
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.monamigabi.com/chicago/menus/"
+                                                target="_blank"
+                                                >Detailed Menu Ornamentations on JSON-Driven Live Text Menus with Dynamic Content</a
+                                            >
+                                        </li>
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.monamigabi.com/las-vegas/parties/"
+                                                target="_blank"
+                                                >Interactive Private Parties
+                                                Page</a
+                                            >
+                                        </li>
+                                        <li class="feature">
+                                            Elegant Transitions and Hover
+                                            Effects, Seemless Reponsiveness
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="link-wrap padding-top">
+                                    <a
+                                        class="button active"
+                                        target="_blank"
+                                        href="https://www.monamigabi.com/"
+                                        >Visit Site</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Coastal Soups -->
+                    <article
+                        aria-label="Coastal Soups - Interactive Soup Menu and Quiz"
+                        class="toggle-card full featured"
+                    >
+                        <div class="text-wrap">
+                            <h3 class="accent">
+                                Coastal Soups<sup>*</sup><sup>*</sup>
+                            </h3>
+                            <p class="desc">
+                                Fun and interactive menu and quiz to drive
+                                engagement with this seasonal soup concept.
+                                Click the buttons below to see a video
+                                walkthrough in desktop and mobile orientations
+                            </p>
+                            <p class="stack">
+                                HTML - PHP - JQuery - SCSS - WordPress
+                            </p>
+                        </div>
+                        <div class="link-wrap margin-top-bttm">
+                            <button
+                                id="cs-desk-bttn"
+                                class="button expand-bttn active"
+                                data-target-sect-id="cs-desk-vid"
+                            >
+                                Desktop
+                            </button>
+                            <button
+                                id="cs-mobile-bttn"
+                                class="button expand-bttn"
+                                data-target-sect-id="cs-mobile-vid"
+                            >
+                                Mobile
+                            </button>
+                        </div>
+                        <div
+                            id="cs-desk-vid"
+                            class="video-container expnd-sect active"
+                        >
+                            <div
+                                aria-label="Watch demo of Coastal Soups Quiz in desktop orientation"
+                                style="
+                                    padding: 57.82% 0 0 0;
+                                    position: relative;
+                                "
+                            >
+                                <iframe
+                                    src="https://player.vimeo.com/video/904601831?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                    frameborder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    style="
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                    "
+                                    title="Coastal Soups"
+                                ></iframe>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>
+                        <div
+                            id="cs-mobile-vid"
+                            class="video-container expnd-sect"
+                        >
+                            <div
+                                aria-label="Watch demo of Coastal Soups Quiz in desktop orientation"
+                                style="
+                                    padding: 57.82% 0 0 0;
+                                    position: relative;
+                                "
+                            >
+                                <iframe
+                                    src="https://player.vimeo.com/video/904603862?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                                    frameborder="0"
+                                    allow="autoplay; fullscreen; picture-in-picture"
+                                    style="
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                    "
+                                    title="Coastal Soups - Mobile"
+                                ></iframe>
+                            </div>
+                            <script src="https://player.vimeo.com/api/player.js"></script>
+                        </div>
+                    </article>
+                    <div class="decor-end bottom"></div>
+                </section>
+                <!-- END Featured -->
+                <section class="gallery flex wrap">
+                    <!-- Wildy Responsible -->
+                    <article
+                        aria-label="Wildy Responsible - microsite within the New Hampshire Board of Tourism main site"
+                        class="card full"
+                    >
+                        <div class="text-wrap">
+                            <h3 class="accent">
+                                Wildly Responsible<sup>*</sup>
+                            </h3>
+                            <p class="desc">
+                                Microsite within the New Hampshire Board of
+                                Tourism main site
+                            </p>
+                            <p class="stack">HTML - TypeScript - SCSS</p>
+                        </div>
+                        <div class="card-img img-wrap">
+                            <img
+                                class="img-bkgd"
+                                src="../images/Wildly_Responsible_Cover.webp"
+                                alt="Screenshot of Wildly Responsible microsite landing page"
+                            />
+                            <div class="overlay">
+                                <div
+                                    aria-label="See features"
+                                    class="tab"
+                                >
+                                    <p>Features</p>
+                                </div>
+                                <div class="close">&times;</div>
+                                <div class="overlay-text">
+                                    <ul class="features">
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.visitnh.gov/wildly-responsible"
+                                                target="_blank"
+                                                >On-scroll Animations, FAQ
+                                                Accordion</a
+                                            >
+                                        </li>
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.visitnh.gov/wildly-responsible/plan"
+                                                target="_blank"
+                                                >Interior Nav in Heroes Turns to
+                                                Slider on Mobile</a
+                                            >
+                                        </li>
+                                        <li class="feature">
+                                            <a
+                                                href="https://www.visitnh.gov/wildly-responsible/fun"
+                                                target="_blank"
+                                                >Seasonal Activities Switcher</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="link-wrap padding-top">
+                                    <a
+                                        class="button active"
+                                        target="_blank"
+                                        href="https://www.mirurestaurant.com/"
+                                        >Visit Site</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Miru -->
+                    <article
+                        aria-label="Miru - Japanese restaurant on the 11th floor of the St. Regis Hotel"
+                        class="card full"
+                    >
+                        <div class="text-wrap">
+                            <h3 class="accent">Miru<sup>*</sup><sup>*</sup></h3>
+                            <p class="desc">
+                                Japanese restaurant on the 11th floor of the St.
+                                Regis Hotel in Downtown Chicago
+                            </p>
+                            <p class="stack">
+                                HTML - PHP - JQuery - SCSS - WordPress
+                            </p>
+                        </div>
+                        <div class="card-img img-wrap">
+                            <img
+                                class="img-bkgd"
+                                src="../images/Miru_Cover.webp"
+                                alt="Screenshot of Miru Restaurant website landing page"
+                            />
+                            <div class="overlay">
+                                <div
+                                    aria-label="See features"
+                                    class="tab"
+                                >
+                                    <p>Features</p>
+                                </div>
+                                <div class="close">&times;</div>
+                                <div class="overlay-text">
+                                    <ul class="features">
+                                        <li class="feature">
+                                            <a href="https://www.mirurestaurant.com/" target="_blank">Modern On-Scroll Visual Effects</a>
+                                        </li>
+                                        <li class="feature">
+                                            <a href="https://www.mirurestaurant.com/parties/" target="_blank">Nuanced Background Textures</a>
+                                        </li>
+                                        <li class="feature">
+                                            <a href="https://www.mirurestaurant.com/menus/" target="_blank">"More Menus" Popout on Menus Page on Mbile</a>
+                                        </li>
+                                        <li class="feature">
+                                            Elevated Button Hover Effects
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="link-wrap padding-top">
+                                    <a
+                                        class="button active"
+                                        target="_blank"
+                                        href="https://www.mirurestaurant.com/"
+                                        >Visit Site</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Osteria Via Stato -->
+                    <article
+                        aria-label="Osteria Via Stato - authentic Italian restaurant in downtown Chicago"
+                        class="card full"
+                    >
+                        <div class="text-wrap">
+                            <h3 class="accent">
+                                Osteria Via Stato<sup>*</sup><sup>*</sup>
+                            </h3>
+                            <p class="desc">
+                                Authentic Italian restaurant in downtown Chicago
+                            </p>
+                            <p class="stack">
+                                HTML - PHP - JQuery - SCSS - WordPress
+                            </p>
+                        </div>
+                        <div class="card-img img-wrap">
+                            <img
+                                class="img-bkgd"
+                                src="../images/OVS_Cover.webp"
+                                alt="Screenshot of Osteria Via Stato website landing page"
+                            />
+                            <div class="overlay">
+                                <div
+                                    aria-label="See features"
+                                    class="tab"
+                                >
+                                    <p>Features</p>
+                                </div>
+                                <div class="close">&times;</div>
+                                <div class="overlay-text">
+                                    <ul class="features">
+                                        <li class="feature">
+                                            <a href="https://www.osteriaviastato.com/weddings/" target="_blank">Stylish and Engaging Weddings Page</a>
+                                        </li>
+                                        <li class="feature">
+                                            <a href="https://www.osteriaviastato.com/menus/?menu=dinnermenu" target="_blank">JSON-Driven Live-text menus with dynamic content</a>
+                                        </li>
+                                        <li class="feature">
+                                            <a href="https://www.osteriaviastato.com/parties/" target="_blank">Photo Galleries Pulled by WordPress Categories</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="link-wrap padding-top">
+                                    <a
+                                        class="button active"
+                                        target="_blank"
+                                        href="https://www.osteriaviastato.com/"
+                                        >Visit Site</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Sweet Jobs -->
+                    <article
+                        aria-label="Sweet Jobs - Krispy Kreme Maui employment site"
+                        class="card full"
+                    >
+                        <div class="text-wrap">
+                            <h3 class="accent">
+                                Sweet Jobs<sup>*</sup><sup>*</sup>
+                            </h3>
+                            <p class="desc">
+                                Employment information site for Krispy Kreme
+                                Maui
+                            </p>
+                            <p class="stack">
+                                HTML - PHP - JQuery - SCSS - WordPress
+                            </p>
+                        </div>
+                        <div class="card-img img-wrap">
+                            <img
+                                class="img-bkgd"
+                                src="../images/Sweet_Jobs_Cover.webp"
+                                alt="Screenshot of Sweet Jobs website landing page"
+                            />
+                            <div class="overlay">
+                                <div
+                                    aria-label="See features"
+                                    class="tab"
+                                >
+                                    <p>Features</p>
+                                </div>
+                                <div class="close">&times;</div>
+                                <div class="overlay-text">
+                                    <ul class="features">
+                                        <li class="feature">
+                                            Symmetrical Responsive Design
+                                        </li>
+                                        <li class="feature">
+                                            Strategic image overlapping sections for seamless section transitions
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="link-wrap padding-top">
+                                    <a
+                                        class="button active"
+                                        target="_blank"
+                                        href="https://www.sweetjobspnw.com/"
+                                        >Visit Site</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <h2 class="footer-title">Daniel L Beasley Web Development</h2>
+            <p>Indianapolis, IN</p>
+            <p><a href="tel:8125253319">(812)-525-3319</a></p>
+            <p>
+                <a
+                    href="mailto: dbeasley.dev@gmail.com"
                     target="_blank"
-                    href="https://www.communitywestbank.com/"
-                    >Visit Site</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-          <article
-            aria-label="Mon Ami Gabi - classic French bistro with three locations nationwide"
-            class="card full featured"
-          >
-            <div class="text-wrap">
-              <h3 class="accent">Mon Ami Gabi<sup>*</sup><sup>*</sup></h3>
-              <p class="desc">
-                Classic French bistro with three locations nationwide
-              </p>
-              <p class="stack">HTML - PHP - JQuery - SCSS - WordPress</p>
-            </div>
-            <div class="card-img img-wrap">
-              <img
-                class="img-bkgd"
-                src="../images/Mon_Ami_Cover.webp"
-                alt="Screenshot of Mon Ami Gabi website landing page"
-              />
-              <div class="overlay">
-                <div aria-label="See More" class="tab"><p>See More</p></div>
-                <div class="close">&times;</div>
-                <div class="overlay-text">
-                  <ul class="features">
-                    <li class="feature">Detailed Menu Ornamentations</li>
-                    <li class="feature">
-                      Nuanced Decorative Borders and Illustrations
-                    </li>
-                    <li class="feature">
-                      Elegent Transition and Hover Effects
-                    </li>
-                    <li class="feature">
-                      Seemlessly Responsive Layout and Nav
-                    </li>
-                  </ul>
-                </div>
-                <div class="link-wrap padding-top">
-                  <a
-                    class="button active"
-                    target="_blank"
-                    href="https://www.monamigabi.com/"
-                    >Visit Site</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-          <article
-            aria-label="Coastal Soups - Interactive Soup Menu and Quiz"
-            class="toggle-card full featured"
-          >
-            <div class="text-wrap">
-              <h3 class="accent">Coastal Soups<sup>*</sup><sup>*</sup></h3>
-              <p class="desc">
-                Fun and interactive menu and quiz to drive engagement with this
-                seasonal soup concept. Click the buttons below to see a video
-                walkthrough in desktop and mobile orientations
-              </p>
-              <p class="stack">HTML - PHP - JQuery - SCSS - WordPress</p>
-            </div>
-            <div class="link-wrap margin-top-bttm">
-              <button
-                id="cs-desk-bttn"
-                class="button expand-bttn active"
-                data-target-sect-id="cs-desk-vid"
-              >
-                Desktop
-              </button>
-              <button
-                id="cs-mobile-bttn"
-                class="button expand-bttn"
-                data-target-sect-id="cs-mobile-vid"
-              >
-                Mobile
-              </button>
-            </div>
-            <div id="cs-desk-vid" class="video-container expnd-sect active">
-              <div
-                aria-label="Watch demo of Coastal Soups Quiz in desktop orientation"
-                style="padding: 57.82% 0 0 0; position: relative"
-              >
-                <iframe
-                  src="https://player.vimeo.com/video/904601831?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                  "
-                  title="Coastal Soups"
-                ></iframe>
-              </div>
-              <script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-            <div id="cs-mobile-vid" class="video-container expnd-sect">
-              <div
-                aria-label="Watch demo of Coastal Soups Quiz in desktop orientation"
-                style="padding: 57.82% 0 0 0; position: relative"
-              >
-                <iframe
-                  src="https://player.vimeo.com/video/904603862?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                  frameborder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                  "
-                  title="Coastal Soups - Mobile"
-                ></iframe>
-              </div>
-              <script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-          </article>
-          <div class="decor-end bottom"></div>
-        </section>
-        <section class="gallery flex wrap">
-          <article
-            aria-label="Wildy Responsible - microsite within the New Hampshire Board of Tourism main site"
-            class="card full"
-          >
-            <div class="text-wrap">
-              <h3 class="accent">Wildly Responsible<sup>*</sup></h3>
-              <p class="desc">
-                Microsite within the New Hampshire Board of Tourism main site
-              </p>
-              <p class="stack">HTML - TypeScript - SCSS</p>
-            </div>
-            <div class="card-img img-wrap">
-              <img
-                class="img-bkgd"
-                src="../images/Wildly_Responsible_Cover.webp"
-                alt="Screenshot of Miru Restaurant website landing page"
-              />
-              <div class="overlay">
-                <div aria-label="See More" class="tab"><p>See More</p></div>
-                <div class="close">&times;</div>
-                <div class="overlay-text">
-                  <ul class="features">
-                    <li class="feature">Modern On-Scroll Visual Effects</li>
-                    <li class="feature">Nuanced Background Textures</li>
-                    <li class="feature">
-                      "More Menus" Popout on Menus Page (mobile)
-                    </li>
-                    <li class="feature">Elevated Button Hover Effects</li>
-                  </ul>
-                </div>
-                <div class="link-wrap padding-top">
-                  <a
-                    class="button active"
-                    target="_blank"
-                    href="https://www.mirurestaurant.com/"
-                    >Visit Site</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-          <article
-            aria-label="Miru - Japanese restaurant on the 11th floor of the St. Regis Hotel"
-            class="card full"
-          >
-            <div class="text-wrap">
-              <h3 class="accent">Miru<sup>*</sup><sup>*</sup></h3>
-              <p class="desc">
-                Japanese restaurant on the 11th floor of the St. Regis Hotel
-              </p>
-              <p class="stack">HTML - PHP - JQuery - SCSS - WordPress</p>
-            </div>
-            <div class="card-img img-wrap">
-              <img
-                class="img-bkgd"
-                src="../images/Miru_Cover.webp"
-                alt="Screenshot of Miru Restaurant website landing page"
-              />
-              <div class="overlay">
-                <div aria-label="See More" class="tab"><p>See More</p></div>
-                <div class="close">&times;</div>
-                <div class="overlay-text">
-                  <ul class="features">
-                    <li class="feature">Modern On-Scroll Visual Effects</li>
-                    <li class="feature">Nuanced Background Textures</li>
-                    <li class="feature">
-                      "More Menus" Popout on Menus Page (mobile)
-                    </li>
-                    <li class="feature">Elevated Button Hover Effects</li>
-                  </ul>
-                </div>
-                <div class="link-wrap padding-top">
-                  <a
-                    class="button active"
-                    target="_blank"
-                    href="https://www.mirurestaurant.com/"
-                    >Visit Site</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-          <article
-            aria-label="Osteria Via Stato - authentic Italian restaurant in downtown Chicago"
-            class="card full"
-          >
-            <div class="text-wrap">
-              <h3 class="accent">Osteria Via Stato<sup>*</sup><sup>*</sup></h3>
-              <p class="desc">
-                Authentic Italian restaurant in downtown Chicago
-              </p>
-              <p class="stack">HTML - PHP - JQuery - SCSS - WordPress</p>
-            </div>
-            <div class="card-img img-wrap">
-              <img
-                class="img-bkgd"
-                src="../images/OVS_Cover.webp"
-                alt="Screenshot of Osteria Via Stato website landing page"
-              />
-              <div class="overlay">
-                <div aria-label="See More" class="tab"><p>See More</p></div>
-                <div class="close">&times;</div>
-                <div class="overlay-text">
-                  <ul class="features">
-                    <li class="feature">Stylish and Engaging Weddings Page</li>
-                    <li class="feature">Expandable/Collapsable Menus</li>
-                    <li class="feature">
-                      Photo Galleries Pulled by WordPress Categories
-                    </li>
-                    <li class="feature">Menu Toggle Functionality</li>
-                  </ul>
-                </div>
-                <div class="link-wrap padding-top">
-                  <a
-                    class="button active"
-                    target="_blank"
-                    href="https://www.osteriaviastato.com/"
-                    >Visit Site</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-          <article
-            aria-label="Sweet Jobs - Krispy Kreme Pacific Northwest employment site"
-            class="card full"
-          >
-            <div class="text-wrap">
-              <h3 class="accent">Sweet Jobs<sup>*</sup><sup>*</sup></h3>
-              <p class="desc">
-                Employment information site for Krispy Kreme Pacfic Northwest
-              </p>
-              <p class="stack">HTML - PHP - JQuery - SCSS - WordPress</p>
-            </div>
-            <div class="card-img img-wrap">
-              <img
-                class="img-bkgd"
-                src="../images/Sweet_Jobs_Cover.webp"
-                alt="Screenshot of Sweet Jobs website landing page"
-              />
-              <div class="overlay">
-                <div aria-label="See More" class="tab"><p>See More</p></div>
-                <div class="close">&times;</div>
-                <div class="overlay-text">
-                  <ul class="features">
-                    <li class="feature">
-                      Engaging On-Scroll Animiations on About Us Page
-                    </li>
-                    <li class="feature">Symmetrical Responsive Design</li>
-                  </ul>
-                </div>
-                <div class="link-wrap padding-top">
-                  <a
-                    class="button active"
-                    target="_blank"
-                    href="https://www.sweetjobspnw.com/"
-                    >Visit Site</a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-        </section>
-      </section>
-    </main>
-    <footer>
-      <h2 class="footer-title">Daniel L Beasley Web Development</h2>
-      <p>Indianapolis, IN</p>
-      <p><a href="tel:8125253319">(812)-525-3319</a></p>
-      <p>
-        <a href="mailto: dbeasley.dev@gmail.com" target="_blank"
-          >dbeasley.dev@gmail.com</a
-        >
-      </p>
-      <script defer src="../script-2-21-24.js"></script>
-    </footer>
-  </body>
+                    >dbeasley.dev@gmail.com</a
+                >
+            </p>
+            <script
+                defer
+                src="../script-2-21-24.js"
+            ></script>
+        </footer>
+    </body>
 </html>
