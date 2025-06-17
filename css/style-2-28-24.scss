@@ -1,5 +1,6 @@
 @import "variables";
 
+///GENERAL
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -149,7 +150,6 @@ input.button {
     &.active {
         color: $cream;
         background-color: $coolBlue;
-        text-underline-offset: 0.1rem;
         font-weight: 900;
         letter-spacing: 0.1rem;
     }
@@ -194,7 +194,7 @@ input.button {
         margin: 0 auto;
     }
     &.margin-top-bttm {
-        margin: 1rem auto 3rem;
+        margin: 1rem auto;
     }
     a.button,
     button.button {
@@ -204,16 +204,17 @@ input.button {
         cursor: pointer;
         z-index: 15;
     }
-    @media only screen and (min-width: 350px) {
-        a.button,
-        button.button {
-            min-width: 275px;
-        }
-    }
+    // @media only screen and (min-width: 350px) {
+    //     a.button,
+    //     button.button {
+    //         min-width: 275px;
+    //     }
+    // }
 }
+//END GENERAL
 
 .header-wrap {
-    padding: 3rem 0 0;
+    padding: 3rem 0.5rem 0;
     @media only screen and (min-width: 768px) {
         padding: 3rem 0 1rem;
     }
@@ -259,113 +260,6 @@ input.button {
     }
 }
 
-#portfolio {
-    padding: 2rem 1rem;
-    gap: 3rem 1rem;
-    max-width: 1050px;
-    margin: auto;
-    .half {
-        flex: 100%;
-    }
-    section#featured {
-        background-color: $gray;
-        width: 100%;
-        padding: 2rem 0.5rem 4rem;
-        margin-bottom: 2rem;
-    }
-    @media only screen and (min-width: 768px) {
-        section#featured {
-            padding: 2rem 1rem 4rem;
-        }
-    }
-    @media only screen and (min-width: 768px) {
-        padding: 2rem 1rem 2rem;
-        section#featured {
-            padding: 2rem 2rem 4rem;
-        }
-    }
-    @media only screen and (min-width: 1100px) {
-        padding: 2rem 1rem 6rem;
-        section#featured {
-            padding: 2rem 4rem 4rem;
-        }
-    }
-}
-
-.gallery {
-    @media only screen and (min-width: 768px) {
-        .card {
-            padding-bottom: 4rem;
-            &:last-child {
-                margin-bottom: 4rem;
-            }
-            .card-img {
-                height: 23rem;
-                margin: 0 2rem;
-            }
-        }
-    }
-    @media only screen and (min-width: 1100px) {
-        flex-direction: row;
-        .card {
-            flex: 45%;
-            margin-bottom: 0;
-            &:last-child {
-                border-bottom: 8px double $lightBlue;
-            }
-            .card-img {
-                height: 19rem;
-                margin: 0;
-                .overlay {
-                    .tab {
-                        p {
-                            font-size: 1.5rem;
-                        }
-                    }
-                    .close {
-                        padding: 0 1rem 0 0;
-                        font-size: 1.5rem;
-                    }
-                    .overlay-text {
-                        padding: 0.25rem 1rem;
-                        ul.features {
-                            margin: 0.25rem 0;
-                            li.feature {
-                                padding: 0.5rem 0 0 0;
-                                font-size: 1.25rem;
-                                &:first-of-type {
-                                    padding: 0;
-                                }
-                            }
-                        }
-                    }
-                    .link-wrap {
-                        &.padding-top {
-                            padding-top: 0.125rem;
-                            a.button {
-                                font-size: 1rem;
-                                padding: 0.5rem 1rem;
-                            }
-                        }
-                    }
-                }
-            }
-            &:nth-child(odd) {
-                border-right: 2px solid $lightBlue;
-                padding: 2rem 2rem 3rem 0;
-            }
-            &:nth-child(even) {
-                padding: 2rem 0 3rem 2rem;
-            }
-            &.tab-show {
-                .overlay {
-                    top: calc(100% - 4.5rem);
-                }
-            }
-        }
-    }
-}
-
 .card,
 .toggle-card {
     display: flex;
@@ -403,9 +297,15 @@ input.button {
         }
     }
     .card-img {
-        height: 12rem;
+        height: 13rem;
+        width: 100%;
+        max-width: 22rem;
+        margin-inline: auto;
         .overlay {
             position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             z-index: 10;
             height: 100%;
             width: 100%;
@@ -424,19 +324,17 @@ input.button {
                 visibility: hidden;
             }
             .overlay-text {
-                height: 55%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 0 0.5rem 0.5rem 0.5rem;
+                padding: 0 0.5rem 0 1rem;
                 ul.features {
                     margin: 0.25rem 0;
                     padding: 0 0.5rem;
                     text-align: left;
                     z-index: 15;
-                    width: 95%;
                     display: none;
                     li.feature {
                         font-size: 0.75rem;
@@ -444,6 +342,9 @@ input.button {
                         margin-bottom: 4px;
                         &:first-of-type {
                             padding: 0;
+                        }
+                        &.desktop-only {
+                            display: none;
                         }
                         a {
                             transition: color 0.2s;
@@ -459,13 +360,10 @@ input.button {
     }
 
     .link-wrap {
-        &.padding-top {
-            padding-top: 0.5rem;
-            a.button {
-                min-width: min-content;
-                font-size: 0.75rem;
-                padding: 0.25rem 0.5rem;
-            }
+        padding-block: 0.5rem;
+        a.button {
+            font-size: 0.75rem;
+            padding: 0.375rem 0.5rem;
         }
     }
     &:first-of-type {
@@ -514,14 +412,11 @@ input.button {
                     font-size: 1.25rem;
                 }
                 .overlay-text {
-                    height: 52%;
-                    padding: 0 1rem 1rem 1rem;
+                    padding: 0 1rem 0 2rem;
                     ul.features {
                         padding: 0 0.5rem;
-                        width: 85%;
                         li.feature {
                             font-size: 0.85rem;
-                            // padding: 1rem 0 0 0;
                             &:first-of-type {
                                 padding: 0;
                             }
@@ -549,13 +444,10 @@ input.button {
                     font-size: 1.25rem;
                 }
                 .overlay-text {
-                    height: 52%;
                     ul.features {
                         padding: 0 0.5rem;
-                        width: 80%;
                         li.feature {
                             font-size: 0.85rem;
-                            // padding: 1rem 0 0 0;
                             &:first-of-type {
                                 padding: 0;
                             }
@@ -580,6 +472,7 @@ input.button {
         }
         .card-img {
             height: 24rem;
+            max-width: 43rem;
             .overlay {
                 .tab {
                     font-size: 1.75rem;
@@ -589,26 +482,27 @@ input.button {
                     padding: 0.25rem 1.5rem 0 0;
                 }
                 .overlay-text {
-                    height: 60%;
+                    padding: 0 2rem 0 3rem;
                     ul.features {
                         padding: 0 0.5rem;
-                        width: 75%;
                         li.feature {
                             font-size: 1.5rem;
                             padding: 0.5rem 0 0 0;
                             &:first-of-type {
                                 padding: 0;
                             }
+                            &.desktop-only {
+                                display: list-item;
+                            }
                         }
                     }
                 }
                 .link-wrap {
-                    &.padding-top {
-                        a.button {
-                            font-size: 1rem;
-                            padding: 0.5rem 2rem 0.75rem;
-                            min-width: 275px;
-                        }
+                    padding-block: 1rem;
+                    a.button {
+                        font-size: 1rem;
+                        padding: 0.75rem 1.5rem;
+                        min-width: 250px;
                     }
                 }
             }
@@ -642,6 +536,7 @@ input.button {
             }
         }
         .card-img {
+            max-width: 47rem;
             .overlay {
                 .tab {
                     p {
@@ -649,7 +544,6 @@ input.button {
                     }
                 }
                 .overlay-text {
-                    height: 65%;
                     ul.features {
                         li.feature {
                             font-size: 1.5rem;
@@ -675,7 +569,6 @@ input.button {
         }
         &.tab-show {
             .overlay {
-                // top: calc(100% - 5rem);
                 .tab {
                     p {
                         margin: 1rem auto;
@@ -696,6 +589,118 @@ input.button {
     &.active {
         display: block;
         visibility: visible;
+    }
+}
+
+#portfolio {
+    padding: 2rem 1rem;
+    gap: 3rem 1rem;
+    max-width: 1050px;
+    margin: auto;
+    .half {
+        flex: 100%;
+    }
+    section#featured {
+        background-color: $gray;
+        width: 100%;
+        padding: 2rem 0.5rem 4rem;
+        margin-bottom: 2rem;
+    }
+    @media only screen and (min-width: 768px) {
+        section#featured {
+            padding: 2rem 1rem 4rem;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        padding: 2rem 1rem 2rem;
+        section#featured {
+            padding: 2rem 2rem 4rem;
+        }
+    }
+    @media only screen and (min-width: 1100px) {
+        padding: 2rem 1rem 6rem;
+        section#featured {
+            padding: 2rem 4rem 4rem;
+        }
+    }
+}
+
+.gallery {
+    @media only screen and (min-width: 768px) {
+        .card {
+            padding-bottom: 4rem;
+            &:last-child {
+                margin-bottom: 4rem;
+            }
+            .card-img {
+                height: 23rem;
+            }
+        }
+    }
+    @media only screen and (min-width: 1100px) {
+        flex-direction: row;
+        .card {
+            flex: 45%;
+            margin-bottom: 0;
+            &:last-child {
+                border-bottom: 8px double $lightBlue;
+            }
+            .card-img {
+                height: 19rem;
+                margin: 0;
+                .overlay {
+                    .tab {
+                        p {
+                            font-size: 1.5rem;
+                        }
+                    }
+                    .close {
+                        padding: 0 1rem 0 0;
+                        font-size: 1.5rem;
+                    }
+                    .overlay-text {
+                        padding: 0.5rem 2rem 0.5rem;
+                        ul.features {
+                            margin: 0.25rem 0;
+                            li.feature {
+                                padding: 0.5rem 0 0 0;
+                                font-size: 1.25rem;
+                                &:first-of-type {
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                    .link-wrap {
+                        padding-top: 0.25rem;
+                        &.padding-top {
+                            padding-top: 0.125rem;
+                            a.button {
+                                font-size: 1rem;
+                                padding: 0.5rem 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(odd) {
+                border-right: 2px solid $lightBlue;
+                padding: 2rem 2rem 3rem 0;
+            }
+            &:nth-child(even) {
+                padding: 2rem 0 3rem 2rem;
+            }
+            &.tab-show {
+                .overlay {
+                    top: calc(100% - 4.5rem);
+                }
+                &.active {
+                    .overlay {
+                        top: 0;
+                    }
+                }
+            }
+        }
     }
 }
 

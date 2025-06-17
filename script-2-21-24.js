@@ -4,8 +4,8 @@ let ninetyEightPercentWindowHeight = windowHeight * 0.98;
 let expandBttns = document.querySelectorAll(".expand-bttn");
 let expandSects = document.querySelectorAll(".expnd-sect");
 let cards = document.querySelectorAll(".card");
+let cardImgs = document.querySelectorAll(".card-img");
 let closeBttns = document.querySelectorAll(".close-card-info");
-//End Variables
 
 //Click Listneners
 expandBttns.forEach(function (bttn) {
@@ -15,10 +15,9 @@ expandBttns.forEach(function (bttn) {
   bttn.addEventListener("click", activeButton);
 });
 
-cards.forEach(function (card) {
-  card.addEventListener("click", activateCard);
+cardImgs.forEach(function (cardImg) {
+  cardImg.addEventListener("click", activateCard);
 });
-//End Click Listeners
 
 //Functions
 function expandSection(e) {
@@ -38,7 +37,7 @@ function activeButton(e) {
   e.target.classList.add("active");
 }
 
-function revealReadMore() {
+function revealShowFeatures() {
   cards.forEach(function (card) {
     var cardImg = card.querySelector(".card-img");
     var distanceFromTop = cardImg.getBoundingClientRect().top;
@@ -52,15 +51,14 @@ function revealReadMore() {
 }
 
 function activateCard() {
-  if (this.classList.contains("active")) {
-    this.classList.remove("active");
+  if (this.parentElement.classList.contains("active")) {
+    this.parentElement.classList.remove("active");
   } else {
     cards.forEach(function (card) {
       card.classList.remove("active");
     });
-    this.classList.add("active");
+    this.parentElement.classList.add("active");
   }
 }
-//End Functions
 
-window.addEventListener("scroll", revealReadMore);
+window.addEventListener("scroll", revealShowFeatures);
