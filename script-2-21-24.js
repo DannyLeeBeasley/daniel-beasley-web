@@ -9,56 +9,57 @@ let closeBttns = document.querySelectorAll(".close-card-info");
 
 //Click Listneners
 expandBttns.forEach(function (bttn) {
-  bttn.addEventListener("click", expandSection);
+    bttn.addEventListener("click", expandSection);
 });
 expandBttns.forEach(function (bttn) {
-  bttn.addEventListener("click", activeButton);
+    bttn.addEventListener("click", activeButton);
 });
 
 cardImgs.forEach(function (cardImg) {
-  cardImg.addEventListener("click", activateCard);
+    cardImg.addEventListener("click", activateCard);
 });
 
 //Functions
 function expandSection(e) {
-  let targetSectId = e.target.dataset.targetSectId;
-  expandSects.forEach(function (sect) {
-    sect.classList.remove("active");
-    if (sect.id == targetSectId) {
-      sect.classList.add("active");
-    }
-  });
+    let targetSectId = e.target.dataset.targetSectId;
+    expandSects.forEach(function (sect) {
+        sect.classList.remove("active");
+        if (sect.id == targetSectId) {
+            sect.classList.add("active");
+        }
+    });
 }
 
 function activeButton(e) {
-  expandBttns.forEach(function (bttn) {
-    bttn.classList.remove("active");
-  });
-  e.target.classList.add("active");
+    expandBttns.forEach(function (bttn) {
+        bttn.classList.remove("active");
+    });
+    e.target.classList.add("active");
 }
 
 function revealShowFeatures() {
-  cards.forEach(function (card) {
-    var cardImg = card.querySelector(".card-img");
-    var distanceFromTop = cardImg.getBoundingClientRect().top;
-    var cardImgHeight = cardImg.offsetHeight;
-    var bottomDistanceFromTop = distanceFromTop + cardImgHeight;
+    cards.forEach(function (card) {
+        var cardImg = card.querySelector(".card-img");
+        var distanceFromTop = cardImg.getBoundingClientRect().top;
+        var cardImgHeight = cardImg.offsetHeight;
+        var bottomDistanceFromTop = distanceFromTop + cardImgHeight;
 
-    if (bottomDistanceFromTop < ninetyEightPercentWindowHeight) {
-      card.classList.add("tab-show");
-    }
-  });
+        if (bottomDistanceFromTop < ninetyEightPercentWindowHeight) {
+            card.classList.add("tab-show");
+        }
+    });
 }
 
 function activateCard() {
-  if (this.parentElement.classList.contains("active")) {
-    this.parentElement.classList.remove("active");
-  } else {
-    cards.forEach(function (card) {
-      card.classList.remove("active");
-    });
-    this.parentElement.classList.add("active");
-  }
+    if (this.parentElement.classList.contains("active")) {
+        this.parentElement.classList.remove("active");
+    } else {
+        cards.forEach(function (card) {
+            card.classList.remove("active");
+        });
+        this.parentElement.classList.add("active");
+    }
 }
 
+//Event Listeners
 window.addEventListener("scroll", revealShowFeatures);
