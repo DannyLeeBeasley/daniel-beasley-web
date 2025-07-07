@@ -164,10 +164,10 @@ input.button {
             text-decoration: underline;
             border: 3px solid $coolBlue;
             letter-spacing: 0.075rem;
+            cursor: default;
             &:is(:hover, :focus-visible) {
                 background: $cream;
                 color: $coolBlue;
-                border: 3px solid $cream;
             }
         }
     }
@@ -182,10 +182,7 @@ input.button {
                 border: 5px solid $coolBlue;
             }
             &.active {
-                border: 5px solid $cream;
-                &:is(:hover, :focus-visible) {
-                    border: 5px solid $cream;
-                }
+                border: 5px solid $coolBlue;
             }
         }
     }
@@ -206,6 +203,7 @@ input.button {
         position: absolute;
         top: 0;
         left: 0;
+        cursor: pointer;
     }
 }
 
@@ -297,7 +295,6 @@ input.button {
     flex-direction: column;
     border-bottom: 8px double $lightBlue;
     width: 100%;
-    cursor: pointer;
     .text-wrap {
         display: flex;
         flex-direction: column;
@@ -341,13 +338,17 @@ input.button {
             .tab {
                 display: block;
                 font-size: 1rem;
+                cursor: pointer;
             }
             .close {
                 font-size: 1rem;
                 text-align: right;
-                padding: 0.25rem 0.75rem 0 0;
+                width: fit-content;
+                margin-left: auto;
+                padding: 0.25rem 0.75rem 0;
                 display: none;
                 visibility: hidden;
+                cursor: pointer;
             }
             .overlay-text {
                 display: flex;
@@ -462,9 +463,6 @@ input.button {
         .card-img {
             height: 13rem;
             .overlay {
-                .close {
-                    font-size: 1.25rem;
-                }
                 .overlay-text {
                     ul.features {
                         padding: 0 0.5rem;
@@ -501,7 +499,7 @@ input.button {
                 }
                 .close {
                     font-size: 2.25rem;
-                    padding: 0.25rem 1.5rem 0 0;
+                    padding: 0.25rem 1.5rem 0;
                 }
                 .overlay-text {
                     padding: 0 2rem 0 3rem;
@@ -677,7 +675,7 @@ input.button {
                         }
                     }
                     .close {
-                        padding: 0 1rem 0 0;
+                        padding: 0 1rem 0;
                         font-size: 1.5rem;
                     }
                     .overlay-text {
