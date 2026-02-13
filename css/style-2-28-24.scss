@@ -373,6 +373,12 @@ input.button {
                         &.desktop-only {
                             display: none;
                         }
+                        ul {
+                            li {
+                                font-size: 0.675rem;
+                                margin-top: 1%;
+                            }
+                        }
                         a {
                             transition: color 0.2s;
                             &:is(:hover, :focus-visible) {
@@ -445,6 +451,11 @@ input.button {
                             &:first-of-type {
                                 padding: 0;
                             }
+                            ul {
+                                li {
+                                    font-size: 0.675rem;
+                                }
+                            }
                         }
                     }
                 }
@@ -459,30 +470,19 @@ input.button {
             }
         }
     }
+
     @media only screen and (min-width: 400px) {
         .card-img {
             height: 13rem;
-            .overlay {
-                .overlay-text {
-                    ul.features {
-                        padding: 0 0.5rem;
-                        li.feature {
-                            font-size: 0.85rem;
-                            &:first-of-type {
-                                padding: 0;
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
+
     @media only screen and (min-width: 768px) {
         .text-wrap {
             p {
                 &.desc {
                     margin: 0 auto 0.25rem;
-                    font-size: 1.25rem;
+                    font-size: 1.125rem;
                 }
                 &.stack {
                     margin: 0.5rem auto 1rem;
@@ -513,6 +513,11 @@ input.button {
                             }
                             &.desktop-only {
                                 display: list-item;
+                            }
+                            ul {
+                                li {
+                                    font-size: 1rem;
+                                }
                             }
                         }
                     }
@@ -547,7 +552,7 @@ input.button {
             p {
                 &.desc {
                     margin: 0 auto 0.25rem;
-                    font-size: 1.25rem;
+                    min-height: 48px;
                 }
                 &.stack {
                     margin: 0.25rem auto 1rem;
@@ -561,13 +566,6 @@ input.button {
                 .tab {
                     p {
                         font-size: 2rem;
-                    }
-                }
-                .overlay-text {
-                    ul.features {
-                        li.feature {
-                            font-size: 1.5rem;
-                        }
                     }
                 }
             }
